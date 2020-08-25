@@ -2,22 +2,22 @@ export const initialState = {
 	//basket: ['pencil', 'pen']
 
 	basket: [
-		{
-			id: '23232',
-			title: 'Iphone',
-			price: 899.0,
-			rating: 4,
-			image:
-				'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-red-select-2020?wid=834&hei=1000&fmt=jpeg'
-		},
-		{
-			id: '23232',
-			title: 'Iphone',
-			price: 899.0,
-			rating: 4,
-			image:
-				'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-red-select-2020?wid=834&hei=1000&fmt=jpeg'
-		}
+		// {
+		// 	id: '23232',
+		// 	title: 'Iphone',
+		// 	price: 899.0,
+		// 	rating: 4,
+		// 	image:
+		// 		'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-red-select-2020?wid=834&hei=1000&fmt=jpeg'
+		// },
+		// {
+		// 	id: '23232',
+		// 	title: 'Iphone',
+		// 	price: 899.0,
+		// 	rating: 4,
+		// 	image:
+		// 		'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-red-select-2020?wid=834&hei=1000&fmt=jpeg'
+		// }
 	],
 	user: null
 };
@@ -28,6 +28,11 @@ export const getBasketTotal = basket =>
 const reducer = (state, action) => {
 	console.log(action);
 	switch (action.type) {
+		case 'SET_USER':
+			return {
+				...state,
+				user: action.user
+			};
 		case 'ADD_TO_BASKET':
 			//add basket
 			return {

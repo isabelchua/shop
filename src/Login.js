@@ -4,6 +4,8 @@ import { Link, useHistory } from 'react-router-dom';
 import { auth } from './firebase';
 
 function Login() {
+	const history = useHistory();
+
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const login = e => {
@@ -14,6 +16,7 @@ function Login() {
 			.signInWithEmailAndPassword(email, password)
 			.then(auth => {
 				//logged in redirect to homepage
+				history.push('/');
 			})
 			.catch(e => alert(e.message));
 	};
