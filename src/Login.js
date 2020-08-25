@@ -21,10 +21,12 @@ function Login() {
 		e.preventDefault(); // stops refresh
 
 		//do login logic
-		auth.createUserWithEmailAndPassword(email, password);
-		then(auth => {
-			//create a user and login redirect to homepage
-		}).catch(e => alert(e.message));
+		auth
+			.createUserWithEmailAndPassword(email, password)
+			.then(auth => {
+				//create a user and login redirect to homepage
+			})
+			.catch(e => alert(e.message));
 	};
 	return (
 		<div className="login">
