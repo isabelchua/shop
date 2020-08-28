@@ -10,7 +10,7 @@ body {
 .btn {
 	box-shadow: inset 0px 0px 0px 0px #fff194;
 	background: linear-gradient(to bottom, #ffbf0e 5%, #de8110 100%);
-	background-color: #ffb01c;
+
 	border-radius: 30px;
 	border: 1px solid #ffbb54;
 	display: inline-block;

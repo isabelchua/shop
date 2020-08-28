@@ -15,22 +15,20 @@ function Subtotal() {
 						<p>
 							Subtotal ({basket.length} items):{' '}
 							<strong>{`${value}`}</strong>
-							<small className="subtotal__gift">
-								<input type="checkbox" />
-								This order contains a gift
-							</small>
+							<p className="coupon">
+								<input type="text" placeholder="Enter Coupon" />
+							</p>
 						</p>
 					</>
 				)}
 				decimalScale={2}
-				//value={getBasketTotal(basket)}
 				value={getBasketTotal(basket)}
 				displayType={'text'}
 				thousandSeparator={true}
 				prefix={'$'}
 			/>
 
-			<button className="btn">Process to Checkout</button>
+			<button className="btn">Proceed to checkout</button>
 		</div>
 	);
 }
