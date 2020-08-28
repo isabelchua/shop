@@ -1,22 +1,28 @@
 * {
 	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding-bottom: 30px;
 }
 
 .btn {
 	box-shadow: inset 0px 0px 0px 0px #fff194;
-	background: linear-gradient(to bottom, #ffd82b 5%, #de8110 100%);
-	background-color: #fad11b;
+	background: linear-gradient(to bottom, #ffbf0e 5%, #de8110 100%);
+	background-color: #ffb01c;
 	border-radius: 30px;
 	border: 1px solid #ffbb54;
 	display: inline-block;
 	cursor: pointer;
 	color: #ffffff;
-	font-family: Arial;
 	font-size: 13px;
 	font-weight: bold;
-	padding: 5px 15px;
+	padding: 10px 20px;
 	text-decoration: none;
-	text-shadow: 1px 1px 0px #ad835f;
+	text-transform: uppercase;
+	/* text-shadow: 1px 1px 0px #ad835f; */
+	margin: 40px 0 20px;
 }
 .btn:hover {
 	background: linear-gradient(to bottom, #de8110 5%, #ffbf34 100%);
