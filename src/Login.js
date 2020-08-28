@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Login.css';
 import { Link, useHistory } from 'react-router-dom';
 import { auth } from './firebase';
+import { ReactComponent as Logo } from './img/logo.svg';
 
 function Login() {
 	const history = useHistory();
@@ -31,14 +32,13 @@ function Login() {
 			})
 			.catch(e => alert(e.message));
 	};
+	// const MenuIcon = (props) =>(
+	// 	<svg xmlns="./img/logo.svg" fill={props.fill} className={props.class}></svg>
+	// 	)
 	return (
 		<div className="login">
 			<Link to="/">
-				<img
-					className="login__logo"
-					src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
-					alt=""
-				/>
+				<Logo className="login_header__logo" fill="black" />
 			</Link>
 			<div className="login__container">
 				<h1>Sign in</h1>
@@ -62,13 +62,15 @@ function Login() {
 					>
 						Sign In
 					</button>
-					<p>by signing in you agree to amazon's conditions</p>
+					<p>
+						by signing in you agree to the Shop's Conditions of Use and
+						Privacy Notice.
+					</p>
 					<button onClick={register} className="login__registerButton">
-						Create your Amazon Account
+						Create your Account
 					</button>
 				</form>
 			</div>
-			<h1>Login Page</h1>
 		</div>
 	);
 }

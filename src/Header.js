@@ -5,6 +5,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase.js';
+import { ReactComponent as Logo } from './img/logo.svg';
 
 function Header() {
 	const [{ basket, user }] = useStateValue();
@@ -20,12 +21,12 @@ function Header() {
 	return (
 		<div className="header">
 			{/* logo */}
+
 			<Link to="/">
-				<img
-					className="header__logo"
-					src="https://www.mozilla.org/media/protocol/img/logos/firefox/monitor/logo-lg-high-res.3efdead4bb9a.png"
-					alt=""
-				/>
+				<div className="logo">
+					<Logo className="header__logo" />
+					<h2>Shop</h2>
+				</div>
 			</Link>
 
 			{/* search */}

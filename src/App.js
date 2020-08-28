@@ -35,7 +35,7 @@ function App() {
 		};
 	}, []);
 
-	console.log('USER is >>>', user);
+	//console.log('USER is >>>', user);
 
 	return (
 		<Router>
@@ -45,7 +45,6 @@ function App() {
 					<Route path="/checkout/">
 						<Header />
 						<Checkout />
-						<h1>Checkout</h1>
 					</Route>
 
 					<Route path="/login">

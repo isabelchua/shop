@@ -1,11 +1,19 @@
 import React from 'react';
-import './Product.css';
+
 import { useStateValue } from './StateProvider';
+import {
+	NotificationContainer,
+	NotificationManager
+} from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
+import './Product.css';
 
 function Product({ id, title, image, price, rating }) {
 	const [{}, dispatch] = useStateValue();
 
 	const addToBasket = () => {
+		NotificationManager.success('Added to basket!', title);
+
 		//add item to basket
 		dispatch({
 			type: 'ADD_TO_BASKET',
@@ -43,7 +51,10 @@ function Product({ id, title, image, price, rating }) {
 			</div>
 
 			<img src={image} alt="" />
-			<button onClick={addToBasket}>Add to basket</button>
+			<button className="btn" onClick={addToBasket}>
+				Add to basket
+			</button>
+			<NotificationContainer />
 		</div>
 	);
 }

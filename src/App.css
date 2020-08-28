@@ -1,3 +1,28 @@
 * {
 	margin: 0;
 }
+
+.btn {
+	box-shadow: inset 0px 0px 0px 0px #fff194;
+	background: linear-gradient(to bottom, #ffd82b 5%, #de8110 100%);
+	background-color: #fad11b;
+	border-radius: 30px;
+	border: 1px solid #ffbb54;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 5px 15px;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #ad835f;
+}
+.btn:hover {
+	background: linear-gradient(to bottom, #de8110 5%, #ffbf34 100%);
+	background-color: #de8110;
+}
+.btn:active {
+	position: relative;
+	top: 1px;
+}
